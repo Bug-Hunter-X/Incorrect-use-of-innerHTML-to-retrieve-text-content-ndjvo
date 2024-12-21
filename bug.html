@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This is some text.
+  </div>
+  <script>
+    // Incorrect way to get the text content using innerHTML, the innerHTML property gets the HTML content and not just the plain text.
+    let text = document.getElementById("myDiv").innerHTML;
+    console.log(text); // Outputs "This is some text." which is correct but not a plain text
+    
+    //Correct way to get the plain text content using textContent
+    let correctText = document.getElementById("myDiv").textContent;
+    console.log(correctText); //Outputs "This is some text." which is the plain text
+  </script>
+</body>
+</html>
